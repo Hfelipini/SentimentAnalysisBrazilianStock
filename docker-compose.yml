@@ -1,0 +1,24 @@
+version: '2'
+
+networks:
+  app-tier:
+    driver: bridge
+
+services:
+  cassandra:
+    image: 'cassandra:latest'
+    networks:
+      - app-tier
+    expose: 
+      - '6000'
+    ports:
+      - '6000:9042'
+  postgres:
+    image: 'postgres:latest'
+    restart: always
+    environment:
+      POSTGRES_PASSWORD: example
+    expose:
+      - '7000'
+    ports:
+      - '7000:5432'
