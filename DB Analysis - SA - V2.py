@@ -53,6 +53,7 @@ df['Rent'].fillna(method='backfill', inplace=True)
 df['Close'].fillna(method='backfill', inplace=True)
 
 # Create figure and axis objects with subplots()
+plt.rcParams.update({'font.size': 6})
 fig,ax = plt.subplots()
 ax.plot(df['Calendar'], df['avg'].rolling(7).mean(),color="red", marker=",")   
 ax.plot(df['Calendar'], df['Rent'].rolling(7).mean(),color="green", marker=",")                            # Make a plot with a Moving Average of 3 days
