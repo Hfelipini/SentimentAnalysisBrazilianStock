@@ -29,6 +29,7 @@ from cassandra.cluster import Cluster
 from datetime import date
 from psycopg2.errorcodes import UNIQUE_VIOLATION
 from psycopg2 import errors
+import os
 
 # ------------------ Postgres Configuration -----------------------------------
 conn = psycopg2.connect("host=127.0.0.1 port=7000 dbname=postgres user=postgres password=example")
@@ -60,10 +61,10 @@ session.execute("USE sentiment;")
 # -------------- Código para ler e gerar infos de Tweets no Twitter -----------
 
 # Twitter API credentials
-consumerKey = '<placeholder>'
-consumerSecret = '<placeholder>'
-accessToken = '<placeholder>'
-accessTokenSecret = '<placeholder>'
+consumerKey = os.environ['consumerKey']
+consumerSecret = os.environ['consumerSecret']
+accessToken = os.environ['accessToken']
+accessTokenSecret = os.environ['accessTokenSecret']
 
 #Frequencia Update
 authenticate = tweepy.OAuthHandler(consumerKey, consumerSecret)
