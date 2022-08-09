@@ -21,6 +21,7 @@ Rules:
 Data Architecture:
 
 For this project it was created a relative simple structured table, as shown below:
+
 ![image](https://user-images.githubusercontent.com/22395461/183540916-11bf1952-27c3-4450-9017-206b772f78a2.png)
 
 How does it work?
@@ -29,6 +30,7 @@ How does it work?
 3rd - Run the code and wait until the code run is completed;
 4th - Open the file "DB Analysis - SA - V2.py"
 5th - Run it with the docker on, the following picture will be shown:
+
 ![Result_Polarity_Return](https://user-images.githubusercontent.com/22395461/183541914-313cccfd-9f00-428d-8acb-5f325eb5d793.jpg)
 
 The correlation getting the last 120 days from 08/08/2022 was 0.23269 between the twitter average sentiment and the BSE close value, which means, there is a slight correlation.
