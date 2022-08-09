@@ -38,5 +38,6 @@ How does it work?
 
 ![Result_Polarity_Return](https://user-images.githubusercontent.com/22395461/183541914-313cccfd-9f00-428d-8acb-5f325eb5d793.jpg)
 
-The correlation getting the last 120 days from 08/08/2022 was 0.23269 between the twitter average sentiment and the BSE close value, which means, there is a slight correlation.
+The correlation getting the last 120 days from 08/08/2022 was 0.23269 between the twitter average sentiment and the BSE close value, which means, there is a slight correlation. As it can be seen in the graph above, the Twitter Average Sentiment reacts to the BSE, which answers the project's main question.
+
 For further studies, it would be healthy to get a higher sample and also give weights for every Twitter Author by the number of followers.
