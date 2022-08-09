@@ -13,7 +13,7 @@ print(conn)
 cursor = conn.cursor()
 
 # Query and create the desirable Dataframe with the Days and Average Polarity from each one from Twitter
-df = pd.read_sql_query('SELECT bet_days, avg(first) FROM ( SELECT user_id, bet_days, avg(polarity) as first FROM Tweet GROUP BY user_id, bet_days) as inner_query GROUP BY bet_days ORDER BY bet_days DESC LIMIT 60',conn)
+df = pd.read_sql_query('SELECT bet_days, avg(first) FROM ( SELECT user_id, bet_days, avg(polarity) as first FROM Tweet GROUP BY user_id, bet_days) as inner_query GROUP BY bet_days ORDER BY bet_days DESC LIMIT 120',conn)
 
 # Get the correct date through the same operation done in the Python - Sentiment Analysis - V3
 df['StartTime'] = date(2000,1,1)                                                                        
@@ -70,6 +70,6 @@ df.to_csv("Dataframe.csv")                                                      
 
 print(df2)
 print(df)
-data = df[['avg','Rent']]
+data = df[['avg','Close']]
 correlation = data.corr(method='pearson')
 print(correlation)
