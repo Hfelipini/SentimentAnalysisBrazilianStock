@@ -25,10 +25,15 @@ For this project it was created a relative simple structured table, as shown bel
 ![image](https://user-images.githubusercontent.com/22395461/183540916-11bf1952-27c3-4450-9017-206b772f78a2.png)
 
 How does it work?
+
 1st - To begin, it is necessary do run the docker-compose.yml to start the Postgres and Cassandra Databases;
+
 2nd - Open the file "Python - Sentiment Analysis - V3.py" and fill the Twitter API's environment variables;
+
 3rd - Run the code and wait until the code run is completed;
-4th - Open the file "DB Analysis - SA - V2.py"
+
+4th - Open the file "DB Analysis - SA - V2.py";
+
 5th - Run it with the docker on, the following picture will be shown:
 
 ![Result_Polarity_Return](https://user-images.githubusercontent.com/22395461/183541914-313cccfd-9f00-428d-8acb-5f325eb5d793.jpg)
